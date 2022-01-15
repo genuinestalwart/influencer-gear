@@ -13,7 +13,7 @@ header, main {
     max-width: 1024px;
     width: 90vw;
 }
-#heading, .ratings {
+#nav-container, #nav-container > div, #heading, .ratings, #special-offer {
     display: flex;
 }
 img {
@@ -25,8 +25,26 @@ p, a {
 a {
     text-decoration: none;
 }
-#heading-details a, footer, #icons > a {
+#heading-details a, footer, #icons > a, #so-details > a {
     color: #ffffff;
+}
+
+/* Nav Container Styles */
+
+#nav-container {
+    align-items: end;
+    height: 100px;
+    justify-content: space-between;
+}
+#nav-container > h3 {
+    margin: 0;
+}
+nav > a, nav > span {
+    color:  #000000;
+    margin-right: 30px;
+}
+#nav-container i {
+    font-size: 20px;
 }
 
 /* Heading Styles */
@@ -41,7 +59,7 @@ a {
     margin-right: 10%;
     width: 50%;
 }
-#heading-details a {
+#heading-details a, #so-details > a {
     background-color: #EE82EE;
     border-radius: 25px;
     display: inline-block;
@@ -97,12 +115,24 @@ h3, footer {
     text-align: right;
 }
 
+/* Special Offer Styles */
+
+#special-offer {
+    margin: 100px 0;
+}
+#so-image {
+    width: 40%;
+}
+#so-details {
+    margin-left: 10%;
+    width: 50%;
+}
+
 /* Footer Styles */
 
 footer {
     background-color: #0a0826;
     margin: 50px 0 0;
-    overflow: hidden;
     padding: 50px 0;
 }
 footer > p {
