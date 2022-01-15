@@ -1,6 +1,6 @@
 /* Fonts */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
 
 /* Parent Level Styles */
 
@@ -37,7 +37,7 @@ a {
     width: 50%;
 }
 #heading-details a {
-    background-color: #e02c6d;
+    background-color: #EE82EE;
     border-radius: 25px;
     color: #ffffff;
     display: inline-block;
@@ -54,4 +54,48 @@ a {
     order: 2;
     padding: 1%;
     width: 40%;
+}
+
+/* Collection Styles */
+
+h3 {
+    text-align: center;
+}
+#collection-container {
+    display: grid;
+    gap: 2.5vw;
+    grid-template-columns: repeat(3, 1fr);
+}
+.collection {
+    border-radius: 5px;
+    box-shadow: 0 0 10px #C0C0C0;
+    padding: 15px;
+}
+.collection > h3 {
+    text-align: left;
+}
+.collection > p {
+    margin: 0;
+}
+.collection p:not(.price, .stars) {
+    color: #808080;
+}
+.price {
+    font-size: large;
+}
+.ratings {
+    display: flex;
+}
+.stars {
+    color: #EE82EE;
+    width: 35%;
+}
+#see-more {
+    color: #EE82EE;
+    display: block;
+    font-size: large;
+    font-weight: 600;
+    margin-top: 50px;
+    text-align: right;
+    text-decoration: none;
 }
