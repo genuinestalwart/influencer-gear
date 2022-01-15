@@ -2,9 +2,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
 
-/* Parent Level Styles */
+/* Parent Level and Common Styles */
 
-body {
+body, .collection > p {
     font-family: 'Poppins', sans-serif;
     margin: 0;
 }
@@ -12,6 +12,9 @@ header, main {
     margin: 0 auto;
     max-width: 1024px;
     width: 90vw;
+}
+#heading, .ratings {
+    display: flex;
 }
 img {
     width: 100%;
@@ -22,12 +25,14 @@ p, a {
 a {
     text-decoration: none;
 }
+#heading-details a, footer, #icons > a {
+    color: #ffffff;
+}
 
 /* Heading Styles */
 
 #heading {
     align-items: center;
-    display: flex;
     height: 45vw;
     max-height: 512px;
 }
@@ -39,7 +44,6 @@ a {
 #heading-details a {
     background-color: #EE82EE;
     border-radius: 25px;
-    color: #ffffff;
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
@@ -58,7 +62,7 @@ a {
 
 /* Collection Styles */
 
-h3 {
+h3, footer {
     text-align: center;
 }
 #collection-container {
@@ -74,17 +78,11 @@ h3 {
 .collection > h3 {
     text-align: left;
 }
-.collection > p {
-    margin: 0;
-}
 .collection p:not(.price, .stars) {
     color: #808080;
 }
 .price {
     font-size: large;
-}
-.ratings {
-    display: flex;
 }
 .stars {
     color: #EE82EE;
@@ -97,5 +95,27 @@ h3 {
     font-weight: 600;
     margin-top: 50px;
     text-align: right;
-    text-decoration: none;
+}
+
+/* Footer Styles */
+
+footer {
+    background-color: #0a0826;
+    margin: 50px 0 0;
+    overflow: hidden;
+    padding: 50px 0;
+}
+footer > p {
+    margin: 0 0 5px;
+}
+#icons {
+    margin-top: 20px;
+}
+#icons > a {
+    background-color: #211b7e;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: large;
+    margin: 0 5px;
+    padding: 5px 10px;
 }
