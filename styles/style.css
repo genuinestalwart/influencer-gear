@@ -13,10 +13,11 @@ header, main {
     max-width: 1024px;
     width: 90vw;
 }
-#nav-container, #nav-container > div, #heading, .ratings, #special-offer {
+#nav-container, #nav-container > div:last-child, #heading, .ratings, #special-offer {
     display: flex;
 }
 img {
+    display: block;
     width: 100%;
 }
 p, a {
@@ -36,6 +37,9 @@ a {
     height: 100px;
     justify-content: space-between;
 }
+#nav-menu {
+    display: none;
+}
 #nav-container > h3 {
     margin: 0;
 }
@@ -52,7 +56,6 @@ nav > a, nav > span {
 #heading {
     align-items: center;
     height: 45vw;
-    max-height: 512px;
 }
 #heading-details {
     order: 1;
@@ -121,10 +124,12 @@ h3, footer {
     margin: 100px 0;
 }
 #so-image {
+    order: 1;
     width: 40%;
 }
 #so-details {
     margin-left: 10%;
+    order: 2;
     width: 50%;
 }
 
@@ -145,7 +150,107 @@ footer > p {
     background-color: #211b7e;
     border-radius: 50%;
     display: inline-block;
-    font-size: large;
+    font-size: x-large;
     margin: 0 5px;
     padding: 5px 10px;
+}
+
+/* --------------- *\
+    Media Queries
+\* --------------- */
+
+@media only screen and (min-width: 1000px) {
+#heading {
+    max-width: 512px;
+}
+}
+@media only screen and (max-width: 999px) {
+header, main {
+    width: 90vw;
+}
+p, a {
+    font-size: 1.25em;
+}
+
+/* Nav Container Styles */
+
+#nav-menu {
+    display: block;
+}
+#nav-menu > * {
+    background-color: #000000;
+    border-radius: 5px;
+    height: 3px;
+    margin: 5px;
+    width: 25px;
+}
+nav {
+    display: none;
+}
+
+/* Heading Styles */
+
+#heading {
+    display: block;
+    height: auto;
+    margin-bottom: 50px;
+}
+#heading-image {
+    background-size: 100% 100%;
+    margin: 30px auto;
+    padding: 5%;
+    width: 90%;
+}
+#heading-details {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
+#heading-details a {
+    border-radius: 35px;
+    padding: 15px 35px;
+}
+#see-more .fa-arrow-right {
+    margin-left: 0;
+}
+
+/* Collection Styles */
+
+#collection-container {
+    gap: 5vw;
+    grid-template-columns: repeat(2, 1fr);
+}
+.collection:last-child {
+    display: none;
+}
+.stars {
+    width: 75%;
+}
+
+/* Special Offer Styles */
+
+#special-offer {
+    display: block;
+    text-align: center;
+}
+#so-details, #so-image {
+    width: 100%;
+}
+#so-details {
+    margin: 0;
+}
+}
+@media only screen and (max-width: 599px) {
+#collection-container {
+    display: block;
+}
+.collection {
+    margin-bottom: 20px;
+}
+.collection:last-child {
+    display: block;
+}
+.stars {
+    width: 45%;
+}
 }
