@@ -48,8 +48,9 @@ a {
     margin-left: 10px;
 }
 #heading-image {
-    background-image: radial-gradient(circle, #f1e4ff 50%, #ffffff 50%);
-    border: 3px solid #f1e4ff;
+    /* background-image: url(i); */
+    background-repeat: no-repeat;
+    /* border: 3px solid #f1e4ff; */
     border-radius: 50%;
     order: 2;
     padding: 1%;
